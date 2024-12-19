@@ -4,6 +4,6 @@ b = input("Enter Second No ")
 print(a+b)
 
 # Concatenate two String value
-c = input("Enter First Name ")
+c = input("Enter First Name " )
 d = input("Enter Last Name ")
 print(c+d)
