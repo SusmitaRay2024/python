@@ -1,5 +1,4 @@
 
-#Addition, Subtraction, Multiplication & Division of two number
 a = int(input("Enter First Number "))
 b = int(input("Enter Second Number "))
 c = a+b
@@ -9,4 +8,4 @@ print("Substraction is: ",d)
 e = a*b
 print("Multiplication is: ",e)
 f = a/b
-print("Division is: ",f)
+print("Division is: ",f) 
