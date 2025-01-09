@@ -1,11 +1,11 @@
 
-a = int(input("Enter First Number "))
-b = int(input("Enter Second Number "))
-c = a+b
-print("Addition is: ",c)
-d = a-b
-print("Substraction is: ",d)
-e = a*b
-print("Multiplication is: ",e)
-f = a/b
-print("Division is: ",f) 
+num1 = int(input("Enter First Number "))
+num2 = int(input("Enter Second Number "))
+add = num1+num2
+print("Addition is: ",add)
+sub = num1-num2
+print("Substraction is: ",sub)
+mul = num1*num2
+print("Multiplication is: ",mul)
+div = num1/num2
+print("Division is: ",div) 
