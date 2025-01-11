@@ -9,6 +9,6 @@ for i in range(n):
     element = input(f"Enter element {i+1}: ")
     a.append(element)
 
-# print("List:", a)
+print("List:", a)
 
-print("Original List"+ str(a))
+# print("Original List"+ str(a))
