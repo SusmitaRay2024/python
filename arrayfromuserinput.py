@@ -1,14 +1,14 @@
 
-a = []
+elements_list = []
 
 # Get the number of elements
-n = int(input("Enter the number of elements: "))
+number_of_elements = int(input("Enter the number of elements: "))
 
 # Append elements to the list
-for i in range(n):
-    element = input(f"Enter element {i+1}: ")
-    a.append(element)
+for index in range(number_of_elements):
+    element = input(f"Enter element {index+1}: ")
+    elements_list.append(element)
 
-print("List:", a)
+print("List:", elements_list)
 
-# print("Original List"+ str(a))
+

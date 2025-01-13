@@ -1,40 +1,43 @@
-#Binary-01110010-base2, Decimal-0to9-base10, Octal-0to7-base-8, HexaDecimal-0to15-base16 (10-15=A-F)
+# Binary (Base-2), Decimal (Base-10), Octal (Base-8), Hexadecimal (Base-16)
+# Binary: 0B, Octal: 0O, Hexadecimal: 0X (default is Decimal)
 
-#Octal to Decimal
-#(13)8 = (?)10
-a=0O13
-print(a) #11
-#(113)8 = (?)10
-b=0O113
-print(b) #75
+# Octal to Decimal
+# (13)8 = (?)10
+octal_number_1 = 0O13
+print(octal_number_1)  # 11
 
-#HexaDecimal to Decimal
-#(2A)16 = (?)10
-c=0X2A
-print(c) #42
-#(DAD)16 = (?)10
-d=0XDAD
-print(d) #3501
+# (113)8 = (?)10
+octal_number_2 = 0O113
+print(octal_number_2)  # 75
 
-#Binary to Decimal
-#(1011)2 = (?)10
-e=0B1011
-print(e) #11
-#(101101)2 = (?)10
-f=0B101101
-print(f) #45
+# Hexadecimal to Decimal
+# (2A)16 = (?)10
+hexadecimal_number_1 = 0X2A
+print(hexadecimal_number_1)  # 42
 
-#0B-> Binary, 0O-> Octal, 0X-> Hexadecimal, default id Decimal
-#Reverse 
+# (DAD)16 = (?)10
+hexadecimal_number_2 = 0XDAD
+print(hexadecimal_number_2)  # 3501
 
-#Decimal to Binary - bin()
-g = 13
-print(bin(g))
+# Binary to Decimal
+# (1011)2 = (?)10
+binary_number_1 = 0B1011
+print(binary_number_1)  # 11
 
-#Decimal to Binary - oct()
-h = 13
-print(oct(h))
+# (101101)2 = (?)10
+binary_number_2 = 0B101101
+print(binary_number_2)  # 45
 
-#Decimal to Binary - hex()
-i = 36
-print(hex(i))
+# Reverse Conversions
+
+# Decimal to Binary - bin()
+decimal_to_binary = 13
+print(bin(decimal_to_binary))  # 0b1101
+
+# Decimal to Octal - oct()
+decimal_to_octal = 13
+print(oct(decimal_to_octal))  # 0o15
+
+# Decimal to Hexadecimal - hex()
+decimal_to_hexadecimal = 36
+print(hex(decimal_to_hexadecimal))  # 0x24
