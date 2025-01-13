@@ -10,6 +10,12 @@ print('Python' in welcome_message)  # True
 email_address = 'susmita@gmail.com'
 print("Valid Email") if ('@' in email_address) else print("Invalid Email")
 
+
 number_list = [10, 5, 70, 30, 35]
 user_input = int(input("Enter a number: "))
 print("Search Successful") if (user_input in number_list) else print("Search Not Successful")
+
+m = [10, 5, 70, 30, 35]
+x = int(input("Enter a number"))
+print ("Searching Success") if (x in m) else print ("Searching Not Succesfull")
+
