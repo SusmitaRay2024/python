@@ -1,23 +1,28 @@
-n = int(input("Enter Linit: "))
-for i in range(1, n+1, 1):
-    for j in range(1, i+1, 1):
+# Program to print patterns based on user input
+limit = int(input("Enter Limit: "))
+
+# Pattern 1: Printing stars in increasing order
+for row in range(1, limit + 1):
+    for column in range(1, row + 1):
         print("*", end=" ")
     print()
 
 print("---------------------------------")
 
-for i in range(1, n+1, 1):
-    for j in range(1, i+1, 1):
-        print(i, end=" ")
+# Pattern 2: Printing row numbers in increasing order
+for row in range(1, limit + 1):
+    for column in range(1, row + 1):
+        print(row, end=" ")
     print()
-    
+
 print("---------------------------------")
 
-for i in range(1, n+1, 1):
-    for j in range(1, i+1, 1):
-        print(j, end=" ")
+# Pattern 3: Printing column numbers in increasing order
+for row in range(1, limit + 1):
+    for column in range(1, row + 1):
+        print(column, end=" ")
     print()
-    
+
 print("---------------------------------")
 
 
