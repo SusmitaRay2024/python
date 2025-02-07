@@ -1,24 +1,22 @@
-# if, else
-n= int(input("Enter a No"))
-print ("hello") if(n>10) else print("Bye")
+# Check if a number is greater than 10
+number = int(input("Enter a Number: "))
+print("Hello the number is greater than 10") if number > 10 else print("Bye")
 
-# Write a program to enter a number & check it's positive or negetive 
-a= int(input("Enter a No"))
-print ("positive number") if(a>=0) else print("Negetive Number")
+# Check if a number is positive or negative
+number = int(input("Enter a Number: "))
+print("Positive Number") if number >= 0 else print("Negative Number")
 
-# Write a program to enter a number & check even or odd
-b= int(input("Enter a No"))
-print ("Even number") if(b%2==0) else print("Odd Number")
+# Check if a number is even or odd
+number = int(input("Enter a Number: "))
+print("Even Number") if number % 2 == 0 else print("Odd Number")
 
-# Write a program to enter two number & print greater between two number
-c= int(input("Enter First No"))
-d= int(input("Enter Second No"))
-print ("Greater Number is ", c) if(c>d) else print("Greater Number is ", d)
+# Find the greater of two numbers
+first_number = int(input("Enter the First Number: "))
+second_number = int(input("Enter the Second Number: "))
+print(f"Greater Number is {first_number}") if first_number > second_number else print(f"Greater Number is {second_number}")
 
-#Print Max Number between 3 number
-e= int(input("Enter First No"))
-f= int(input("Enter Second No"))
-g= int(input("Enter Third No"))
-print ("Greater Number is ", e) if(e>f)and(e>g) else print("Greater Number is ", f) if(f>e)and(f>g) else print("Greater Number is ", g) 
-
-
+# Find the maximum of three numbers
+first = int(input("Enter the First Number: "))
+second = int(input("Enter the Second Number: "))
+third = int(input("Enter the Third Number: "))
+print(f"Greatest Number is {first}") if (first > second and first > third) else print(f"Greatest Number is {second}") if second > third else print(f"Greatest Number is {third}")
