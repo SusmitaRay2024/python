@@ -3,16 +3,17 @@
 #
 #               filter(function, iterable)
 
-friends = [("Rachel",19),
-           ("Monica",18),
-           ("Phoebe",17),
-           ("Joey",16),
-           ("Chandler",21),
-           ("Ross",20)]
 
-age = lambda data:data[1] >= 18
+friend = [("Rachel", 19),
+          ("Monica", 18),
+          ("Phobe",17),
+          ("Joey", 16),
+          ("Chandeler", 21),
+          ("Ross", 20)]
 
-drinking_buddies = list(filter(age, friends))
+age  = lambda data:data[1] >= 18
 
-for i in drinking_buddies:
+travel_buddies = list(filter(age,friend))
+
+for i in travel_buddies:
     print(i)

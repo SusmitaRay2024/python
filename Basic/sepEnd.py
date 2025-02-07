@@ -1,3 +1,3 @@
 a = 100
 b = 20
-print(a, b, sep=":", end="...")
+print(a, b, sep=";", end="***")

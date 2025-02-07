@@ -1,0 +1,6 @@
+print("Hello123".isalnum())
+print("Hello World123".isalnum())
+print("HelloWorld123!".isalnum())
+print("123".isalnum())
+print("abc".isalnum())
+print("".isalnum())

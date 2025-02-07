@@ -1,15 +1,9 @@
 # sort() method   = used with lists
 # sort() function = used with iterables
 
-students = (("Squidward", "F", 60),
-            ("Sandy", "A", 33),
-            ("Patrick","D", 36),
-            ("Spongebob","B", 20),
-            ("Mr.Krabs","C", 78))
+students = ["Squidward", "Sandy", "Patrick", "Spongebob", "Mr.Krabs"]
 
-grade = lambda grades:grades[1]
-# students.sort(key=age)                                       # sorts current list
-sorted_students = sorted(students,key=grade) # sorts and creates a new list
+students.sort(reverse=True) #students.sort(reverse=True)
 
-for i in sorted_students:
+for i in students:
     print(i)
