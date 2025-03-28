@@ -1,6 +1,56 @@
 from tkinter import *
+from tkinter import messagebox
 from PIL import ImageTk, Image
+import pymysql
 
+def clear():
+    emailEntry.delete(0,END)
+    usernameEntry.delete(0,END)
+    passwordEntry.delete(0,END)
+    confirmEntry.delete(0,END)
+    check.set(0)
+    
+
+def connect_database():
+    if emailEntry.get()=='' or usernameEntry.get()=='' or passwordEntry.get()=='' or confirmEntry.get()=='':
+        messagebox.showerror('Error', 'All Fields are Required')
+    elif passwordEntry.get() != confirmEntry.get():
+        messagebox.showerror('Error', 'Password Mismatch')
+    elif check.get()==0:
+        messagebox.showerror('Error', 'Please Accept Terms and Conditions')
+    else:
+        try:
+            con= pymysql.connect(host='localhost', user='root', password='Hello5@123' )
+            mycursor=con.cursor()
+        except:
+            messagebox.showerror('Error','Database Connectivity Issue, Please Try Again')
+            return
+        try:
+            query='create database userdata'
+            mycursor.execute(query)
+            query='use userdata'
+            mycursor.execute(query)
+            query='create table data(id int auto_increment primary key not null, email varchar(50), username varchar(100), password varchar(20))'
+            mycursor.execute(query)
+        except:
+            mycursor.execute('use userdata')
+        
+        query='select * from data where username=%s'
+        mycursor.execute(query,(usernameEntry.get()))
+        
+        row=mycursor.fetchone()
+        if row != None:
+            messagebox.showerror('Error', 'Username Already Exists')
+        else:
+            query ='insert into data(email,username,password) values(%s,%s,%s)'
+            mycursor.execute(query,(emailEntry.get(),usernameEntry.get(),passwordEntry.get()))
+            con.commit()
+            con.close()  
+            messagebox.showinfo('Success', 'Registration is successful')
+            clear()
+            signupWindow.destroy()
+            import signin
+            
 def login_page():
     signupWindow.destroy()
     import signin
@@ -57,21 +107,21 @@ confirmEntry=Entry(frame, width=30, font=('Microsoft Yahei UI Light',10,'bold'),
                  fg='white', bg='grey' )
 confirmEntry.grid(row=8, column=0, sticky='w', padx=55)
 
-
+check = IntVar()
 termsandconditions = Checkbutton(frame, 
                                  text='I agree to the Terms & Conditions',  # Add `text=`
                                  font=('Microsoft YaHei UI Light', 9, 'bold'), 
                                  fg='grey', bg='white', activebackground='white', activeforeground='grey', 
-                                 cursor='hand2')
+                                 cursor='hand2', variable=check)
 termsandconditions.grid(row=9,column=0, pady=10, padx=15)
 
 
-signupButton=Button(frame,text='Login', 
+signupButton=Button(frame,text='Signup', 
                    font=('Open Sans',16,'bold'),
                    fg='white', bg='grey',
                    activebackground='grey',
                    activeforeground='white',
-                   cursor='hand2', bd=0, width=17)
+                   cursor='hand2', bd=0, width=17, command=connect_database)
 signupButton.grid(row=10, column=0, pady=10)
 
 
